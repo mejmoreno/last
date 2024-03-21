@@ -10,6 +10,8 @@ int main()
 	//time management
 
 	do {
+		
+		system("cls");
 
 		int lower = 1, upper = 10;
 		srand(time(0)); int numFlights = (rand() % (upper - lower + 1)) + lower;
@@ -27,6 +29,20 @@ int main()
 			<< "\nEnter choice: ";
 
 		cin >> flightDestination;
+
+		cout << "\n\nWould you like to avail our airline's meal?"
+
+			int meal;
+
+			cin >> meal;
+		if (meal == 1) {
+			cout
+				<< "\nAvailable options"
+				<< "\n\nCasual Meal: PHP 450"
+				<< "\nDeluxe Meal: PHP 700"
+				<< "\nRegular refreshments: PHP 250";
+
+		}else continue
 
 		system("cls");
 
@@ -101,6 +117,7 @@ int main()
 			<< person.name << endl
 			<< person.email << endl
 			<< person.date << endl;
+		<< "Total expenditure: Flight + Meal";
 
 		cout
 			<< "\n\nWould you like to book another flight?" << endl
@@ -114,7 +131,7 @@ int main()
 
 		if (choice == 2) {
 			cout << "\nThank you for choosing us, see you again!";
-				exit(0);
+			exit(0);
 		}
 		else continue;
 
