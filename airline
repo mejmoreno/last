@@ -1,0 +1,122 @@
+#include <iostream>
+#include <string>
+#include <string.h>
+#include <cstring>
+using namespace std;
+int main()
+{
+	//inventory
+	//people management
+	//time management
+
+	do {
+
+		int lower = 1, upper = 10;
+		srand(time(0)); int numFlights = (rand() % (upper - lower + 1)) + lower;
+
+		int flightDestination;
+
+		cout
+			<< "Travel Agency System\n" << endl
+			<< "[1] Flight from Philippines -> Singapore" << endl
+			<< "[2] Flight from Philippines -> Hong Kong" << endl
+			<< "[3] Flight from Philippines -> Bangkok" << endl
+			<< "[4] Flight from Philippines -> US" << endl
+			<< "[5] Flight from Philippines -> Japan" << endl
+			<< "[0] Exit" << endl
+			<< "\nEnter choice: ";
+
+		cin >> flightDestination;
+
+		system("cls");
+
+		switch (flightDestination) {
+		case 1:
+			cout
+				<< "Philippines -> Singapore" << endl
+				<< "Flight cost: PHP 19,540";
+			break;
+		case 2:
+			cout
+				<< "Philippines -> Hongkong" << endl
+				<< "Flight cost: PHP 19,254";
+			break;
+		case 3:
+			cout
+				<< "Philippines -> Bangkok" << endl
+				<< "Flight cost: PHP 15,935";
+			break;
+		case 4:
+			cout
+				<< "Philippines -> US" << endl
+				<< "Flight cost: PHP 68,042";
+			break;
+		case 5:
+			cout
+				<< "Philippines -> Japan" << endl
+				<< "Flight cost: PHP 29,732";
+			break;
+		case 0:
+			cout << "Exiting..." << endl;
+			exit(0);
+		default:
+			cout
+				<< "Please enter a valid input.";
+			return 0;
+		}
+
+		cout << "\n\nThere are currently " << numFlights << " no. of flight(s) available for your destination.";
+
+		struct {
+			string name, email, date;
+
+		}person;
+
+		cout
+			<< "\n\nPlease enter the required information to confirm your booking" << endl
+			<< "Name: ";
+		cin >> person.name;
+		cout << "Email: ";
+		cin >> person.email;
+		cout << "Specify a date for your flight: ";
+		cin >> person.date;
+
+		system("cls");
+
+		cout << "Confirming your booking...";
+
+		cout
+			<< "\n\n" << person.name << endl
+			<< person.email << endl
+			<< person.date << endl
+			<< "\nNow providing your flight details...";
+
+		int i;
+		for (i = 0; i < 1; i++)
+			rand();
+
+		cout
+			<< "\nFlight no. " << i
+			<< "\nSeat no. " << i << endl
+			<< person.name << endl
+			<< person.email << endl
+			<< person.date << endl;
+
+		cout
+			<< "\n\nWould you like to book another flight?" << endl
+			<< "[1] Yes" << endl
+			<< "[2] No" << endl
+			<< "\nChoice: ";
+
+		int choice;
+
+		cin >> choice;
+
+		if (choice == 2) {
+			cout << "\nThank you for choosing us, see you again!";
+				exit(0);
+		}
+		else continue;
+
+	} while (true);
+}
