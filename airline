@@ -5,135 +5,135 @@
 using namespace std;
 int main()
 {
-	//inventory
-	//people management
-	//time management
+    //inventory
+    //people management
+    //time management
 
-	do {
-		
-		system("cls");
+    do {
 
-		int lower = 1, upper = 10;
-		srand(time(0)); int numFlights = (rand() % (upper - lower + 1)) + lower;
+        system("cls");
 
-		int flightDestination;
+        int lower = 1, upper = 10;
+        srand(time(0)); int numFlights = (rand() % (upper - lower + 1)) + lower;
 
-		cout
-			<< "Travel Agency System\n" << endl
-			<< "[1] Flight from Philippines -> Singapore" << endl
-			<< "[2] Flight from Philippines -> Hong Kong" << endl
-			<< "[3] Flight from Philippines -> Bangkok" << endl
-			<< "[4] Flight from Philippines -> US" << endl
-			<< "[5] Flight from Philippines -> Japan" << endl
-			<< "[0] Exit" << endl
-			<< "\nEnter choice: ";
+        int flightDestination;
 
-		cin >> flightDestination;
+        cout
+                << "Travel Agency System\n" << endl
+                << "[1] Flight from Philippines -> Singapore" << endl
+                << "[2] Flight from Philippines -> Hong Kong" << endl
+                << "[3] Flight from Philippines -> Bangkok" << endl
+                << "[4] Flight from Philippines -> US" << endl
+                << "[5] Flight from Philippines -> Japan" << endl
+                << "[0] Exit" << endl
+                << "\nEnter choice: ";
 
-		cout << "\n\nWould you like to avail our airline's meal?"
+        cin >> flightDestination;
 
-			int meal;
+        cout << "\n\nWould you like to avail our airline's meal?";
 
-			cin >> meal;
-		if (meal == 1) {
-			cout
-				<< "\nAvailable options"
-				<< "\n\nCasual Meal: PHP 450"
-				<< "\nDeluxe Meal: PHP 700"
-				<< "\nRegular refreshments: PHP 250";
+        int meal;
 
-		}else continue
+        cin >> meal;
+        if (meal == 1) {
+            cout
+                    << "\nAvailable options"
+                    << "\n\nCasual Meal: PHP 450"
+                    << "\nDeluxe Meal: PHP 700"
+                    << "\nRegular refreshments: PHP 250";
 
-		system("cls");
+        }else continue;
 
-		switch (flightDestination) {
-		case 1:
-			cout
-				<< "Philippines -> Singapore" << endl
-				<< "Flight cost: PHP 19,540";
-			break;
-		case 2:
-			cout
-				<< "Philippines -> Hongkong" << endl
-				<< "Flight cost: PHP 19,254";
-			break;
-		case 3:
-			cout
-				<< "Philippines -> Bangkok" << endl
-				<< "Flight cost: PHP 15,935";
-			break;
-		case 4:
-			cout
-				<< "Philippines -> US" << endl
-				<< "Flight cost: PHP 68,042";
-			break;
-		case 5:
-			cout
-				<< "Philippines -> Japan" << endl
-				<< "Flight cost: PHP 29,732";
-			break;
-		case 0:
-			cout << "Exiting..." << endl;
-			exit(0);
-		default:
-			cout
-				<< "Please enter a valid input.";
-			return 0;
-		}
+        system("cls");
 
-		cout << "\n\nThere are currently " << numFlights << " no. of flight(s) available for your destination.";
+        switch (flightDestination) {
+            case 1:
+                cout
+                        << "Philippines -> Singapore" << endl
+                        << "Flight cost: PHP 19,540";
+                break;
+            case 2:
+                cout
+                        << "Philippines -> Hongkong" << endl
+                        << "Flight cost: PHP 19,254";
+                break;
+            case 3:
+                cout
+                        << "Philippines -> Bangkok" << endl
+                        << "Flight cost: PHP 15,935";
+                break;
+            case 4:
+                cout
+                        << "Philippines -> US" << endl
+                        << "Flight cost: PHP 68,042";
+                break;
+            case 5:
+                cout
+                        << "Philippines -> Japan" << endl
+                        << "Flight cost: PHP 29,732";
+                break;
+            case 0:
+                cout << "Exiting..." << endl;
+                exit(0);
+            default:
+                cout
+                        << "Please enter a valid input.";
+                return 0;
+        }
 
-		struct {
-			string name, email, date;
+        cout << "\n\nThere are currently " << numFlights << " no. of flight(s) available for your destination.";
 
-		}person;
+        struct {
+            string name, email, date;
 
-		cout
-			<< "\n\nPlease enter the required information to confirm your booking" << endl
-			<< "Name: ";
-		cin >> person.name;
-		cout << "Email: ";
-		cin >> person.email;
-		cout << "Specify a date for your flight: ";
-		cin >> person.date;
+        }person;
 
-		system("cls");
+        cout
+                << "\n\nPlease enter the required information to confirm your booking" << endl
+                << "Name: ";
+        cin >> person.name;
+        cout << "Email: ";
+        cin >> person.email;
+        cout << "Specify a date for your flight: ";
+        cin >> person.date;
 
-		cout << "Confirming your booking...";
+        system("cls");
 
-		cout
-			<< "\n\n" << person.name << endl
-			<< person.email << endl
-			<< person.date << endl
-			<< "\nNow providing your flight details...";
+        cout << "Confirming your booking...";
 
-		int i;
-		for (i = 0; i < 1; i++)
-			rand();
+        cout
+                << "\n\n" << person.name << endl
+                << person.email << endl
+                << person.date << endl
+                << "\nNow providing your flight details...";
 
-		cout
-			<< "\nFlight no. " << i
-			<< "\nSeat no. " << i << endl
-			<< person.name << endl
-			<< person.email << endl
-			<< person.date << endl;
-		<< "Total expenditure: Flight + Meal";
+        int i;
+        for (i = 0; i < 1; i++)
+            rand();
 
-		cout
-			<< "\n\nWould you like to book another flight?" << endl
-			<< "[1] Yes" << endl
-			<< "[2] No" << endl
-			<< "\nChoice: ";
+        cout
+                << "\nFlight no. " << i
+                << "\nSeat no. " << i << endl
+                << person.name << endl
+                << person.email << endl
+                << person.date << endl
+        << "Total expenditure: Flight + Meal";
 
-		int choice;
+        cout
+                << "\n\nWould you like to book another flight?" << endl
+                << "[1] Yes" << endl
+                << "[2] No" << endl
+                << "\nChoice: ";
 
-		cin >> choice;
+        int choice;
 
-		if (choice == 2) {
-			cout << "\nThank you for choosing us, see you again!";
-			exit(0);
-		}
-		else continue;
+        cin >> choice;
 
-	} while (true);
+        if (choice == 2) {
+            cout << "\nThank you for choosing us, see you again!";
+            exit(0);
+        }
+        else continue;
+
+    } while (true);
 }
