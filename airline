@@ -137,3 +137,152 @@ int main()
 
     } while (true);
 }
+
+/*
+#include <iostream>
+#include <string>
+#include <ctime> // For time
+#include <iomanip> // For setw
+using namespace std;
+
+struct Flight {
+    string destination;
+    int cost;
+};
+
+struct Booking {
+    string name;
+    string email;
+    string date;
+    string destination;
+    int flightNo;
+    int seatNo;
+    int totalCost;
+    string bookingRef;
+};
+
+// Function to generate a random booking reference
+string generateBookingRef() {
+    const string charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const int length = 6;
+    string result;
+    srand(time(0));
+    for (int i = 0; i < length; ++i) {
+        result += charset[rand() % charset.length()];
+    }
+    return result;
+}
+
+// Function to display flight schedule
+void displayFlightSchedule(Flight flights[], int numFlights) {
+    cout << "\nFlight Schedule\n";
+    cout << setw(10) << "Flight No." << setw(20) << "Destination" << setw(15) << "Cost (PHP)" << endl;
+    for (int i = 0; i < numFlights; ++i) {
+        cout << setw(10) << i + 1 << setw(20) << flights[i].destination << setw(15) << flights[i].cost << endl;
+    }
+}
+
+int main()
+{
+    // Define meal cost
+    const int MEAL_COST = 600;
+
+    // Define flight destinations and costs
+    const int MAX_FLIGHTS = 5;
+    Flight flights[MAX_FLIGHTS] = {
+            {"Singapore", 19540},
+            {"Hong Kong", 19254},
+            {"Bangkok", 15935},
+            {"US", 68042},
+            {"Japan", 29732}
+    };
+
+    do {
+        system("cls");
+
+        int lower = 1, upper = 10;
+        srand(time(0));
+        int numFlights = (rand() % (upper - lower + 1)) + lower;
+
+        // Display flight schedule
+        displayFlightSchedule(flights, MAX_FLIGHTS);
+
+        int flightDestination;
+
+        cout << "\nEnter the number corresponding to your desired destination (0 to Exit): ";
+        cin >> flightDestination;
+
+        if (flightDestination == 0) {
+            cout << "Exiting..." << endl;
+            exit(0);
+        }
+
+        // Validate user input
+        if (flightDestination < 1 || flightDestination > MAX_FLIGHTS) {
+            cout << "Invalid input. Please try again." << endl;
+            continue;
+        }
+
+        // Get the selected flight
+        Flight selectedFlight = flights[flightDestination - 1];
+
+        // Meal option
+        cout << "\nWould you like to avail our airline's meal? (1 for Yes, 0 for No): ";
+        int mealChoice;
+        cin >> mealChoice;
+        int mealCost = 0;
+        if (mealChoice == 1) {
+            mealCost = MEAL_COST;
+            cout << "\nMeal added to your booking." << endl;
+        }
+
+        system("cls");
+
+        cout << "Airline Booking System" << endl;
+        cout << "Selected Destination: " << selectedFlight.destination << endl;
+        cout << "Flight Cost: PHP " << selectedFlight.cost << endl;
+        cout << "Meal Cost: PHP " << mealCost << endl;
+
+        int totalCost = selectedFlight.cost + mealCost;
+        cout << "Total Cost: PHP " << totalCost << endl;
+
+        // Collect booking information
+        string name, email, date;
+        cout << "\nPlease enter the required information to confirm your booking" << endl;
+        cout << "Name: ";
+        cin >> name;
+        cout << "Email: ";
+        cin >> email;
+        cout << "Specify a date for your flight: ";
+        cin >> date;
+
+        // Generate booking reference
+        string bookingRef = generateBookingRef();
+
+        // Simulate booking confirmation
+        cout << "\nBooking Confirmed!" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Email: " << email << endl;
+        cout << "Date: " << date << endl;
+        cout << "Destination: " << selectedFlight.destination << endl;
+        cout << "Total Cost: PHP " << totalCost << endl;
+        cout << "Booking Reference: " << bookingRef << endl;
+
+        cout << "\nWould you like to book another flight?" << endl;
+        cout << "[1] Yes" << endl;
+        cout << "[2] No" << endl;
+        cout << "Choice: ";
+
+        int choice;
+        cin >> choice;
+
+        if (choice == 2) {
+            cout << "\nThank you for choosing us, see you again!" << endl;
+            exit(0);
+        }
+
+    } while (true);
+
+    return 0;
+}
+*/
